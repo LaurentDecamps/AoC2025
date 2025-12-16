@@ -1,33 +1,67 @@
-# Day 15 - A paradigm shift
+# Day 16 - Code as a documentation
 
-> _December 15, 2025 - A paradigm shift
+> _December 16, 2025 - Code as a documentation
 
-![snippet of the day](img/day15.png)
+![snippet of the day](img/day16.png)
 
   ==> **Loading Fractured Memory** <==
 
-On the 15th day, your fractured memory takes you to a world in which exceptions are ruining systems.
-They are everywhere and they are plunging the world in chaos... and you have to fix Santa's Xmas list! 
+On the 16th day, your fractured memory is bringing you right into the International Xmas Emergency Council!
 
-Your job is to switch to a different approach, handle edge cases for differently.
+The room is tense. Representatives from 12 countries are present, and they're not happy.
 
-**After all, isn't exceptions to handle exceptional scenarios?**
+**"Tokyo got Santa at the wrong time again!"**  
+**"Mumbai's logistics were completely off!"**  
+**"We can't keep running Christmas on code nobody understands!"**
 
-A shift in paradigm might help.
+The system was written in 1987 and there is no documentation. The code works—mostly—but every few years there's an "incident." Last year it was Mumbai. The year before, Tokyo. Small timing errors that cause massive logistical headaches.
 
-## Challenge — Don't use exceptions to handle failures.
+**The code isn't broken. The code is *terrifying*.**
 
-Today is not trivial. We are questioning our use of exceptions. 
-In this code base, the exception are especially wrongly used.
+## Challenge — Restore the lost knowledge.
 
-You are to use the skills you know since the beginning of the adventure to handle failures.
+Today, your first mission is not to refactor a code.
+They don't need you to rewrite the code (not yet, anyway). 
 
- 1) A result object.
- 2) A monadic structure.
+They just need to **understand what it does**.
 
-Use the approach that you want but you will need to shift your perception.
+The team left you a backlog filled with tickets to document.
+**You need to document them all**
 
-**Hint:** Start with one builder. Let the pattern emerge. Don't build everything upfront.
+Remember the council does not read code, they need a real documentation. (use a type of visual documentation)
+
+**Hint:** Think what is the shortest feedback loop? Is it to run the program?
+
+---
+
+## The Ticket Backlog
+
+Your team has collected questions from various incidents. Use these as starting points:
+
+### 🎫 Investigation Tickets
+
+**TICKET-101: Why does Hawaii get December 25th but New York gets December 24th?**
+- Hawaii: UTC-10
+- New York: UTC-5
+- They both get 11 PM... but different days? What's the pattern?
+
+**TICKET-102: Why does London get 8 PM but New York gets 11 PM?**
+- London: UTC+0, gets 8 PM on Dec 24th
+- New York: UTC-5, gets 11 PM on Dec 24th
+- Both Christmas Eve, but 3 hours apart. Why?
+
+**TICKET-103: What happens at exactly UTC-5 and UTC+0?**
+- These seem to be boundary points. How are they treated?
+- Are they grouped with the zones before or after them?
+
+**TICKET-104: How does the system handle half-hour timezones?**
+- Mumbai: UTC+5.5
+- Newfoundland: UTC-3.5
+- The 2023 incident happened with one of these...
+
+**TICKET-105: What's the complete rule set?**
+- Can you document all the business rules for timezones from -12 to +14?
+- How many distinct behaviors are there?
 
 ---
 
@@ -38,7 +72,7 @@ We will go to /exercises and the dayNN
 
 You can then pick the stack you want to use as your **main stack**.
 
-- `exercises/day15/<your-stack>/`
+- `exercises/day16/<your-stack>/`
 
 This is your playground.
 
@@ -48,7 +82,7 @@ This is your playground.
 
 On Discord, you can share:
 
- - What approach did you end up taking?
+ - What did you decide to do to understand the code?
  - Did you switch your approach midway through your refactoring?
 
 If you want your work to be public, add your file to:
@@ -59,7 +93,7 @@ If you want your work to be public, add your file to:
 
 In `journey/your-name.md`, write a short entry for today:
 
- - What do you think of functional programming techniques?
- - How do you use exceptions in your daily code?
+ - Is Test As A Documentation an automatic approach for you?
+ - How did you feel doing pre-refactoring on existing legacy code?
 
-**Let's move past exceptions! ❌**
+**Good luck restoring the lost knowledge! 📜**
