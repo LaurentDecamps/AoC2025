@@ -152,6 +152,7 @@ After each day you participate, jot down:
 - [Day 14 - Your tests tell a story.](challenges/day14/README.md)
 - [Day 15 - A paradigm shift.](challenges/day15/README.md)
 - [Day 16 - Code as a documentation.](challenges/day16/README.md)
+- [Day 17 - Santa's lost gift dispatcher.](challenges/day17/README.md)
 
 ## Who are we?
 
