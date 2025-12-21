@@ -156,6 +156,7 @@ After each day you participate, jot down:
 - [Day 18 - Risky sleigh.](challenges/day18/README.md)
 - [Day 19 - North Pole Companies.](challenges/day19/README.md)
 - [Day 20 - Architecture proposal.](challenges/day20/README.md)
+- [Day 21 - Community activations.](challenges/day21/README.md)
 
 ## Who are we?
 
